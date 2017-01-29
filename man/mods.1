@@ -1,0 +1,64 @@
+.\" $Id$ -*-nroff-*-
+.TH "mods" 1 "2017-01-29"
+
+.SH 名前
+mods \- 寡黙なランチャー
+
+.SH 書式
+.B mods オプション | メニュー定義ファイル [ ディレクトリ ]
+
+.SH 説明
+.PP
+\fBmods\fR はシンプルなランチャーです。
+
+
+.SH オプション
+
+.TP
+.BI \--help 
+簡単なヘルプを表示します。表示後終了します。
+
+.TP
+.BI \-? 
+簡単なヘルプを表示します。表示後終了します。
+
+.TP
+.BI \--version
+バージョンを表示します。表示後終了します。
+
+
+.SH メニュー定義ファイル
+必須パラメータとして処理内容を記述したテキストファイルの名前を記述します。
+
+
+.SH ディレクトリ
+オプショナルとしてメニュー定義ファイルの存在するディレクトリを指定できます。
+必須パラメータとしてディレクトリ情報も含めて記述すれば、こちらを指定する必要性はありません。
+
+
+.SH メニュー定義ファイルの例
+.PP
+pcmanfm,lxterminal,nautilus の登録例
+.IP
+text="Folder(pcmanfm)";cmd="/usr/bin/pcmanfm";
+.br
+text="Terminal"       ;cmd="/usr/bin/lxterminal";
+.br
+text="Folder(nautils)";cmd="/usr/bin/nautilus";
+
+.PP
+別途定義済みのメニュー定義ファイルの登録例
+.IP
+text="Editor >"    ;cmd="</home/hoge/.config/mods/editor.mnu";
+.br
+text="Utility >"   ;cmd="</home/hoge/.config/mods/utility.mnu";
+.br
+text="Internet >"  ;cmd="</home/hoge/.config/mods/internet.mnu";
+.br
+text="Office >"    ;cmd="</home/hoge/.config/mods/office.mnu";
+.br
+text="Game >"      ;cmd="</home/hoge/.config/mods/game.mnu";
+
+
+.SH 作者
+Takataka.
